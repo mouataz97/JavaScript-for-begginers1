@@ -19,3 +19,21 @@ const calculAverageRating = (ratings) => {
     return sum/rating.length;
 }
 export{ calculAverageRating };
+
+class Guest {
+    constructor(name, age, vip){
+        this.name = name;
+        this.age = age;
+        this.vip = vip;
+    }
+}
+
+const firstGuest = new Guest('anon walliams', 35, fals);
+
+const toggleGuestVip = (guest) => {
+    let newGuest = guest;
+    newGuest.vip = !newGuest.vip;
+    return newGuest;
+}
+
+const newGuest = toggleGuestVip(firstGuest);
